@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> selectedHeroes = new ArrayList<>();
     ArrayList<String> filteredHeroes = new ArrayList<>();
     AlphaAnimation fadeOutAnimation; AlphaAnimation fadeInAnimation;
-    TextView counter;
+    TextView counter; //test
     Button calcButton;
     AlphaAnimation fastFadeOut;
 
