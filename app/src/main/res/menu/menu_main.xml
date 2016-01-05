@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+
+    <!--<item android:id="@+id/action_search"
+        android:title="Search"
+        android:orderInCategory="0"
+        app:showAsAction="always|withText"
+        android:titleCondensed="Search"
+        />-->
+
+    <item
+        android:icon="@android:drawable/ic_menu_more"
+        android:title="Filter"
+        android:titleCondensed="Filter"
+        android:orderInCategory="0"
+        app:showAsAction="always|withText">
+        <menu>
+            <item
+                android:id="@+id/menuFilterAgi"
+                android:title="Only Agility Heroes" />
+            <item
+                android:id="@+id/menuFilterStr"
+                android:title="Only Strength Heroes" />
+            <item
+                android:id="@+id/menuFilterInt"
+                android:title="Only Intelligence Heroes" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/reset"
+        android:title="@string/reset"
+        android:orderInCategory="0"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        app:showAsAction="ifRoom" />
+
+</menu>

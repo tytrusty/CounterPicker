@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Counter Picker</string>
+    <string name="reset">Reset Heroes</string>
+    <string name="action_settings">Settings</string>
+    <string name="starter_help">Select up to 5 heroes that you want to counter</string>
+    <string name="starter_title">Counter Picker for Dota 2</string>
+    <string name="starter_go">Go!</string>
+    <string name="starter_author">By Tythatguy</string>
+    <string name="main_counter">0 / 5</string>
+    <string name="main_calculate_button">Calculate</string>
+</resources>

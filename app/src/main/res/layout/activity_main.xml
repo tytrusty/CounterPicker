@@ -1,0 +1,1821 @@
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:scrollbars="none"
+    android:layout_weight="1">
+
+        <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="10dip"
+        android:isScrollContainer="true"
+        android:background="@color/colorBackground">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton1"
+                android:layout_column="0"
+                android:src="@drawable/abaddon_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="abaddon"
+                 />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton2"
+                android:layout_column="1"
+                android:src="@drawable/alchemist_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitStart"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="alchemist"/>
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton3"
+                android:layout_column="2"
+                android:src="@drawable/antimage_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitStart"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="antimage"/>
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton4"
+                android:layout_column="3"
+                android:src="@drawable/ancient_apparition_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitStart"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="ancient_apparition"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton0"
+                android:layout_column="0"
+                android:src="@drawable/arc_warden_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="arc_warden"
+                android:clickable="true"/>
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton5"
+                android:layout_column="1"
+                android:src="@drawable/axe_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="axe" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton6"
+                android:layout_column="2"
+                android:src="@drawable/bane_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="bane" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton7"
+                android:layout_column="3"
+                android:src="@drawable/batrider_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="batrider" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton8"
+                android:layout_column="0"
+                android:src="@drawable/beastmaster_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="beastmaster"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton14"
+                android:layout_column="1"
+                android:src="@drawable/bloodseeker_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="bloodseeker" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton20"
+                android:layout_column="2"
+                android:src="@drawable/bounty_hunter_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="bounty_hunter" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton26"
+                android:layout_column="3"
+                android:src="@drawable/brewmaster_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="brewmaster" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton9"
+                android:layout_column="0"
+                android:src="@drawable/bristleback_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="bristleback"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton15"
+                android:layout_column="1"
+                android:src="@drawable/broodmother_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="broodmother" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton21"
+                android:layout_column="2"
+                android:src="@drawable/centaur_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="centaur" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton27"
+                android:layout_column="3"
+                android:src="@drawable/chaos_knight_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="chaos_knight" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton10"
+                android:layout_column="0"
+                android:src="@drawable/chen_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="chen"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton16"
+                android:layout_column="1"
+                android:src="@drawable/clinkz_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="clinkz" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton22"
+                android:layout_column="2"
+                android:src="@drawable/crystal_maiden_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="crystal_maiden" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton28"
+                android:layout_column="3"
+                android:src="@drawable/dark_seer_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="dark_seer" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton11"
+                android:layout_column="0"
+                android:src="@drawable/dazzle_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="dazzle"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton17"
+                android:layout_column="1"
+                android:src="@drawable/death_prophet_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="death_prophet" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton23"
+                android:layout_column="2"
+                android:src="@drawable/disruptor_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="disruptor" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton29"
+                android:layout_column="3"
+                android:src="@drawable/doom_bringer_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="doom_bringer" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton12"
+                android:layout_column="0"
+                android:src="@drawable/dragon_knight_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="dragon_knight"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton18"
+                android:layout_column="1"
+                android:src="@drawable/drow_ranger_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="drow_ranger" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton24"
+                android:layout_column="2"
+                android:src="@drawable/earth_spirit_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="earth_spirit" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton30"
+                android:layout_column="3"
+                android:src="@drawable/earthshaker_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="earthshaker" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton13"
+                android:layout_column="0"
+                android:src="@drawable/elder_titan_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="elder_titan"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton19"
+                android:layout_column="1"
+                android:src="@drawable/ember_spirit_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="ember_spirit" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton25"
+                android:layout_column="2"
+                android:src="@drawable/enchantress_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="enchantress" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton31"
+                android:layout_column="3"
+                android:src="@drawable/enigma_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="enigma" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton32"
+                android:layout_column="0"
+                android:src="@drawable/faceless_void_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="faceless_void"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton38"
+                android:layout_column="1"
+                android:src="@drawable/furion_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="furion" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton44"
+                android:layout_column="2"
+                android:src="@drawable/gyrocopter_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="gyrocopter" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton50"
+                android:layout_column="3"
+                android:src="@drawable/huskar_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="huskar" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton33"
+                android:layout_column="0"
+                android:src="@drawable/invoker_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="invoker"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton39"
+                android:layout_column="1"
+                android:src="@drawable/jakiro_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="jakiro" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton45"
+                android:layout_column="2"
+                android:src="@drawable/juggernaut_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="juggernaut" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton51"
+                android:layout_column="3"
+                android:src="@drawable/keeper_of_the_light_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="keeper_of_the_light" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton34"
+                android:layout_column="0"
+                android:src="@drawable/kunkka_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="kunkka"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton40"
+                android:layout_column="1"
+                android:src="@drawable/legion_commander_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="legion_commander" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton46"
+                android:layout_column="2"
+                android:src="@drawable/leshrac_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="leshrac" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton52"
+                android:layout_column="3"
+                android:src="@drawable/lich_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="lich" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton35"
+                android:layout_column="0"
+                android:src="@drawable/life_stealer_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="life_stealer"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton41"
+                android:layout_column="1"
+                android:src="@drawable/lina_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="lina" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton47"
+                android:layout_column="2"
+                android:src="@drawable/lion_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="lion" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton53"
+                android:layout_column="3"
+                android:src="@drawable/lone_druid_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="lone_druid" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton36"
+                android:layout_column="0"
+                android:src="@drawable/luna_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="luna"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton42"
+                android:layout_column="1"
+                android:src="@drawable/lycan_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="lycan" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton48"
+                android:layout_column="2"
+                android:src="@drawable/magnataur_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="magnus" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton54"
+                android:layout_column="3"
+                android:src="@drawable/medusa_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="medusa" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton37"
+                android:layout_column="0"
+                android:src="@drawable/meepo_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="meepo"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton43"
+                android:layout_column="1"
+                android:src="@drawable/mirana_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="mirana" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton49"
+                android:layout_column="2"
+                android:src="@drawable/morphling_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="morphling" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton55"
+                android:layout_column="3"
+                android:src="@drawable/naga_siren_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="naga_siren" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton56"
+                android:layout_column="0"
+                android:src="@drawable/necrolyte_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="necrolyte"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton57"
+                android:layout_column="1"
+                android:src="@drawable/nevermore_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="shadow_fiend" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton62"
+                android:layout_column="2"
+                android:src="@drawable/night_stalker_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="night_stalker" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton65"
+                android:layout_column="3"
+                android:src="@drawable/nyx_assassin_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="nyx_assassin" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton60"
+                android:layout_column="0"
+                android:src="@drawable/obsidian_destroyer_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="outworld_devourer"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton58"
+                android:layout_column="1"
+                android:src="@drawable/ogre_magi_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="ogre_magi" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton63"
+                android:layout_column="2"
+                android:src="@drawable/omniknight_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="omniknight" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton66"
+                android:layout_column="3"
+                android:src="@drawable/oracle_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="oracle" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton61"
+                android:layout_column="0"
+                android:src="@drawable/phantom_assassin_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="phantom_assassin"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton59"
+                android:layout_column="1"
+                android:src="@drawable/phantom_lancer_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="phantom_lancer" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton64"
+                android:layout_column="2"
+                android:src="@drawable/phoenix_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="phoenix" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton67"
+                android:layout_column="3"
+                android:src="@drawable/puck_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="puck" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton68"
+                android:layout_column="0"
+                android:src="@drawable/pudge_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="pudge"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton69"
+                android:layout_column="1"
+                android:src="@drawable/pugna_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="pugna" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton70"
+                android:layout_column="2"
+                android:src="@drawable/queenofpain_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="queenofpain" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton71"
+                android:layout_column="3"
+                android:src="@drawable/rattletrap_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="clockwork" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton72"
+                android:layout_column="0"
+                android:src="@drawable/razor_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="razor"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton78"
+                android:layout_column="1"
+                android:src="@drawable/riki_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="riki" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton84"
+                android:layout_column="2"
+                android:src="@drawable/rubick_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="rubick" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton90"
+                android:layout_column="3"
+                android:src="@drawable/sand_king_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="sand_king" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton73"
+                android:layout_column="0"
+                android:src="@drawable/shadow_demon_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="shadow_demon"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton79"
+                android:layout_column="1"
+                android:src="@drawable/shadow_shaman_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="shadow_shaman" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton85"
+                android:layout_column="2"
+                android:src="@drawable/shredder_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="timbersaw" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton91"
+                android:layout_column="3"
+                android:src="@drawable/silencer_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="silencer" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton74"
+                android:layout_column="0"
+                android:src="@drawable/skeleton_king_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="wraith_king"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton80"
+                android:layout_column="1"
+                android:src="@drawable/skywrath_mage_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="skywrath_mage" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton86"
+                android:layout_column="2"
+                android:src="@drawable/slardar_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="slardar" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton92"
+                android:layout_column="3"
+                android:src="@drawable/slark_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="slark" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton75"
+                android:layout_column="0"
+                android:src="@drawable/sniper_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="sniper"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton81"
+                android:layout_column="1"
+                android:src="@drawable/spectre_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="spectre" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton87"
+                android:layout_column="2"
+                android:src="@drawable/spirit_breaker_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="spirit_breaker" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton93"
+                android:layout_column="3"
+                android:src="@drawable/storm_spirit_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="storm_spirit" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton76"
+                android:layout_column="0"
+                android:src="@drawable/sven_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="sven"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton82"
+                android:layout_column="1"
+                android:src="@drawable/techies_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="techies" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton88"
+                android:layout_column="2"
+                android:src="@drawable/templar_assassin_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="templar_assassin" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton94"
+                android:layout_column="3"
+                android:src="@drawable/terrorblade_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="terrorblade" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton77"
+                android:layout_column="0"
+                android:src="@drawable/tidehunter_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="tidehunter"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton83"
+                android:layout_column="1"
+                android:src="@drawable/tinker_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="tinker" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton89"
+                android:layout_column="2"
+                android:src="@drawable/tiny_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="tiny" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton95"
+                android:layout_column="3"
+                android:src="@drawable/treant_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="treant" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton96"
+                android:layout_column="0"
+                android:src="@drawable/troll_warlord_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="troll_warlord"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton99"
+                android:layout_column="1"
+                android:src="@drawable/tusk_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="tusk" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton102"
+                android:layout_column="2"
+                android:src="@drawable/undying_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="undying" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton105"
+                android:layout_column="3"
+                android:src="@drawable/ursa_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="ursa" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton97"
+                android:layout_column="0"
+                android:src="@drawable/vengefulspirit_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="vengefulspirit"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton100"
+                android:layout_column="1"
+                android:src="@drawable/venomancer_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="venomancer" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton103"
+                android:layout_column="2"
+                android:src="@drawable/viper_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="viper" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton106"
+                android:layout_column="3"
+                android:src="@drawable/visage_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="visage" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton98"
+                android:layout_column="0"
+                android:src="@drawable/warlock_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="warlock"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton101"
+                android:layout_column="1"
+                android:src="@drawable/weaver_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="weaver" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton104"
+                android:layout_column="2"
+                android:src="@drawable/windrunner_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="windrunner" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton107"
+                android:layout_column="3"
+                android:src="@drawable/winter_wyvern_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="winter_wyvern" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp">
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton108"
+                android:layout_column="0"
+                android:src="@drawable/wisp_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="wisp"
+                android:clickable="true" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton109"
+                android:layout_column="1"
+                android:src="@drawable/witch_doctor_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="witch_doctor" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton110"
+                android:layout_column="2"
+                android:src="@drawable/zuus_hphover"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:tag="zeus" />
+
+            <ImageButton
+                android:background="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton111"
+                android:layout_column="3"
+                android:maxHeight="80dp"
+                android:maxWidth="77dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:clickable="false"/>
+        </TableRow>
+
+
+    </TableLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/overlay_mask"
+        android:clickable="true"
+        android:layout_height="55dp"
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:layout_alignParentBottom="true">
+
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="@string/main_calculate_button"
+            android:textSize="16sp"
+            android:id="@+id/calculate_button"
+            android:background="@drawable/button_border"
+            android:textColor="#FFFFFF"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:background="@drawable/text_border"
+            android:text="@string/main_counter"
+            android:id="@+id/selection_count"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="50dp" />
+
+    </RelativeLayout>
+</RelativeLayout>
