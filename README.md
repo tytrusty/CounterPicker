@@ -6,4 +6,3 @@
 
 [**DIRECTORY of XML LAYOUTS**] (https://github.com/tytrusty/CounterPicker/tree/master/app/src/main/res/layout)
 
-![AppGfycat] (http://i.imgur.com/Se5hzbo.gifv)
