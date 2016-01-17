@@ -6,3 +6,4 @@
 
 [**DIRECTORY of XML LAYOUTS**] (https://github.com/tytrusty/CounterPicker/tree/master/app/src/main/res/layout)
 
+[Gfycat of App] (https://gfycat.com/LikelySilverAbyssiniangroundhornbill)
