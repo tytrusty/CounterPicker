@@ -51,7 +51,7 @@ import java.util.List;
  * @author Ty Trusty
  * @version 1/16/16
  */
-public class endActivity extends AppCompatActivity {
+public class MiddleActivity extends AppCompatActivity {
     public static final String PREFS_NAME = "MyPrefsFile";
     public static ArrayList<ImageButton> myButtonImages = null;
     ArrayList<String> selectedHeroes = new ArrayList<>();

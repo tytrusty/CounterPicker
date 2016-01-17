@@ -70,8 +70,8 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public void onAnimationEnd(Animation animation) {
-                endActivity.myButtonImages = myButtonImages; //SENDING myButtonImages data to endActivity by setting static variable
-                Intent i = new Intent(getApplicationContext(), endActivity.class);
+                MiddleActivity.myButtonImages = myButtonImages; //SENDING myButtonImages data to MiddleActivity by setting static variable
+                Intent i = new Intent(getApplicationContext(), MiddleActivity.class);
                 i.putExtra("heroes", selectedHeroes);        //Sending selected heroes data with an intent
                 startActivity(i);
             }

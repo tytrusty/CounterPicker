@@ -6,7 +6,7 @@
     android:background="@color/colorBackground"
     android:clipToPadding="true"
     android:clipChildren="true"
-    tools:context="com.heropicker.ty.counterpicker.endActivity">
+    tools:context=".MiddleActivity">
 
 
 </RelativeLayout>

@@ -26,7 +26,7 @@
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.heropicker.ty.counterpicker.endActivity"
+            android:name=".MiddleActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity android:name="com.heropicker.ty.counterpicker.ResultActivity"></activity>
