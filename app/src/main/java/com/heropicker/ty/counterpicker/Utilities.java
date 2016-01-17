@@ -106,8 +106,10 @@ public class Utilities {
             return "wraith_king";
         else if(hero.toLowerCase().equals("shredder"))
             return "timbersaw";
-        else if(hero.toLowerCase().equals("nature's_prophet"))
+        else if(hero.toLowerCase().equals("nature'sprophet"))
             return "furion";
+        else if(hero.toLowerCase().equals("arcwarden"))
+            return "arc_warden";
         return hero;
     }
 
