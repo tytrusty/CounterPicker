@@ -92,7 +92,7 @@ public class MiddleActivity extends AppCompatActivity {
         layoutView = (RelativeLayout) inflater.inflate(R.layout.activity_end,null); //Inflate activity_end.xml and uses it as parent
         setContentView(layoutView); //Sets the inflated activity_end as the view the user sees
         params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-
+        getSupportActionBar().hide();
         //-----------------METHODS THAT DO THE MAIN WORK-------WORKING SIMULTANEOUSLY ------------------------------//
         runAsyncTask(); //Works in the background calculating the counters                                          //
         addOverlay(selectedHeroes);  //Adds the overlay then calls the method to add the selected hero views        //
@@ -236,7 +236,7 @@ public class MiddleActivity extends AppCompatActivity {
         hero = heroes.get(0);
 
         int viewHeight = getWindowManager().getDefaultDisplay().getHeight();
-        viewHeight = viewHeight / 6;
+        viewHeight = viewHeight / 5;
         int viewWidth = (int)(viewHeight * ((double)71/127)); //Fraction representing the width * length ratio
         //System.out.println("viewHeight" + viewHeight + " viewWidth " + viewWidth);
 
