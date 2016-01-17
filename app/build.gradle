@@ -8,8 +8,8 @@ android {
         applicationId "com.heropicker.ty.counterpicker"
         minSdkVersion 19
         targetSdkVersion 23
-        versionCode 8
-        versionName "2.06"
+        versionCode 9
+        versionName "2.07"
     }
     buildTypes {
         release {

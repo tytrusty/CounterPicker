@@ -172,9 +172,9 @@ public class MiddleActivity extends AppCompatActivity {
 
         @Override
         protected Void doInBackground(Void... params) {
-                //TODO if fail to connect to internet, call useData() and use old data
+                //TODO if fail to connect to internet, call useData() and use assets data
                 //TODO When extracting data from internet, inflate a view with a loading circle and a textView that changes to show progress
-
+            isDataOld = false; //THIS MEANS IT IS NEVER ACCESSING THE INTERNET ... USING DATA FROM ASSETS FOLDER
             if(isDataOld) {
                 writeData(); //Collects fresh data and places into text file
                 //myHeroes represents selected heroes
@@ -363,7 +363,7 @@ public class MiddleActivity extends AppCompatActivity {
         String dataLine = "x";
 
         for (int i = 0; i < tags.size(); i++) {
-            System.out.println("ATTEMPTED HERO NAME " + tags.get(i));
+            //System.out.println("ATTEMPTED HERO NAME " + tags.get(i));
             String modifiedName = Utilities.modifyHeroName(tags.get(i));
             String url = "http://dotamax.com/hero/detail/match_up_anti/" + modifiedName + "/?skill=vh";
             Document doc = null;
@@ -381,13 +381,14 @@ public class MiddleActivity extends AppCompatActivity {
                 String heroName = columns.get(0).select("span").text(); //Gets hero name
                 String rating   = columns.get(1).text().replace("%","");
                 dataLine = modifiedName + "," + heroName + "," + rating;
-                //System.out.println(dataLine);
-                try {
+                System.out.println(dataLine);
+                //UNCOMMENT TO WRITE TO INTERNAL STORAGE
+                /*try {
                     writer.write(dataLine + "\n");
                     writer.flush();
                 } catch(IOException e) {
                     e.printStackTrace();
-                }
+                }*/
             }
 
         } //end of main for loop
@@ -427,7 +428,7 @@ public class MiddleActivity extends AppCompatActivity {
     }
 
     //Reads data from asset text file and transfers it to internal storage file
-    public void writeOldData() { //Current data date 12/27/15
+    public void writeOldData() { //Current data date 1/17/16
         System.out.println("Writing old data from asset text to internal storage at writeOldData() function");
         OutputStreamWriter writer = new OutputStreamWriter(fileOut); //Used to write to textFile
         BufferedReader br = null;
