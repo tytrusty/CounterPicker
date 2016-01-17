@@ -4,4 +4,4 @@
 
 [**DIRECTORY OF JAVA CLASSES:**] (https://github.com/tytrusty/CounterPicker/tree/master/app/src/main/java/com/heropicker/ty/counterpicker)
 
-**DIRECTORY of XML LAYOUTS:** CounterPicker/app/src/main/res/layout/
+[**DIRECTORY of XML LAYOUTS:**] (https://github.com/tytrusty/CounterPicker/tree/master/app/src/main/res/layout)
