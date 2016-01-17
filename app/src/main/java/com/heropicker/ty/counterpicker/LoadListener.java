@@ -1,7 +1,10 @@
 package com.heropicker.ty.counterpicker;
 
 /**
- * Created by TY on 12/20/2015.
+ * Interface that is implemented in IntListener.java
+ *
+ * @author Ty Trusty
+ * @version 12/20/15
  */
 public interface LoadListener
 {

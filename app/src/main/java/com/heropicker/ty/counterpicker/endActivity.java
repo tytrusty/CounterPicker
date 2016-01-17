@@ -44,6 +44,13 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * This activity follows MainActivity and sends the user to ResultActivity, so it is the 3rd activity
+ * Class that handles data extraction and processing in the background. The user is shown which heroes were selected.
+ *
+ * @author Ty Trusty
+ * @version 1/16/16
+ */
 public class endActivity extends AppCompatActivity {
     public static final String PREFS_NAME = "MyPrefsFile";
     public static ArrayList<ImageButton> myButtonImages = null;
@@ -59,6 +66,7 @@ public class endActivity extends AppCompatActivity {
     ArrayList<String> newHeroes;
     RelativeLayout heroChild;
     String hero;
+    //Used when reading and writing files
     String MY_FILE_NAME = "hero_data.txt";
     File file;
     FileOutputStream fileOut;
@@ -89,18 +97,21 @@ public class endActivity extends AppCompatActivity {
         runAsyncTask(); //Works in the background calculating the counters                                          //
         addOverlay(selectedHeroes);  //Adds the overlay then calls the method to add the selected hero views        //
         //----------------------------------------------------------------------------------------------------------//
-        intState = new IntListener();
-        intState.setOnChangeListener(new LoadListener() {
-            @Override
-            public void onChange(int load) {
-                if(intState.get() == 2) { //IF IT IS 2 THEN BOTH the calculation and animations are done
-                    Intent i = new Intent(getApplicationContext(),ResultActivity.class);
-                    ResultActivity.fullRatings = ratings;
-                    ResultActivity.images = myButtonImages;
-                    startActivity(i, ActivityOptions.makeCustomAnimation(getApplicationContext(), R.anim.fade_in, R.anim.nothing).toBundle());
-                }
-            }
-        });
+
+        //--------------THIS IS THE TRIGGER TO MOVE TO RESULT ACTIVITY-------*TRIGGERED WHEN ABOVE PROCESSES FINISH*----------------------------//
+        intState = new IntListener();                                                                                                           //
+        intState.setOnChangeListener(new LoadListener() {                                                                                       //
+            @Override                                                                                                                           //
+            public void onChange(int load) {                                                                                                    //
+                if(intState.get() == 2) { //IF IT IS 2 THEN BOTH the calculation and animations are done                                        //
+                    Intent i = new Intent(getApplicationContext(),ResultActivity.class);                                                        //
+                    ResultActivity.fullRatings = ratings;                                                                                       //
+                    ResultActivity.images = myButtonImages;                                                                                     //
+                    startActivity(i, ActivityOptions.makeCustomAnimation(getApplicationContext(), R.anim.fade_in, R.anim.nothing).toBundle());  //
+                }                                                                                                                               //
+            }                                                                                                                                   //
+        });                                                                                                                                     //
+        //------------------------------------------------------------------------------------------------------------------------------------- //
     }
 
     private void runAsyncTask() {
@@ -163,7 +174,6 @@ public class endActivity extends AppCompatActivity {
         protected Void doInBackground(Void... params) {
                 //TODO if fail to connect to internet, call useData() and use old data
                 //TODO When extracting data from internet, inflate a view with a loading circle and a textView that changes to show progress
-            //checkFileEmpty(); not used
 
             if(isDataOld) {
                 writeData(); //Collects fresh data and places into text file
@@ -244,7 +254,7 @@ public class endActivity extends AppCompatActivity {
         ImageView image = (ImageView)heroChild.findViewById(R.id.heroImage);
         image.setId(View.generateViewId());
         imageParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        image.setLayoutParams(imageParams);
+        image.setLayoutParams(imageParams); //This is a real train wreck of a function.
         Drawable imageDrawable = heroButton.getDrawable(); imageDrawable.clearColorFilter();
         image.setImageDrawable(imageDrawable); //Setting image for hero
 
@@ -325,6 +335,7 @@ public class endActivity extends AppCompatActivity {
     public void initializeFiles() throws FileNotFoundException {
         file = new File(getApplicationContext().getFilesDir(),MY_FILE_NAME);
         //TODO right now it just deletes everytime to avoid data errors
+        //The data error is a result of writeOldData failing overwrite the data in the internal storage after app updates.
         file.delete();
         try {
             if(!file.exists())
@@ -333,25 +344,14 @@ public class endActivity extends AppCompatActivity {
         } catch (IOException e) {}
         fileOut = new FileOutputStream(file,true);
         fileIn = new FileInputStream(file);
-        writeOldData(); //TODO shouldn't have to writeOldData everytime
-
-
-    }
-
-    public void checkFileEmpty() { //FUNCTION NOT USED
-        try {
-            if(fileIn == null || fileIn.available() == 0) {
-                isDataOld = true; //means there is no data present so this is set to true so that write data is called
-                System.out.println("FILE IS EMPTY");
-            } else {
-                System.out.println("FILE IS NOT EMPTY");
-            }
-            System.out.println("AVAILABLE VALUE " + fileIn.available());
-
-        } catch (IOException e) { e.printStackTrace();}
+        writeOldData(); //TODO shouldn't writeOldData everytime.
+        /*I am writing old data because writeData() is error prone and can take minutes to extract all the data
+        easier for me to call the writeData function then manually add the data to hero_data.txt where it will
+        be accessed from the writeOldData function*/
 
     }
 
+    //Connects to the internet and extract data
     public void writeData() {
         try { //ensures that the file is empty
             file.delete();

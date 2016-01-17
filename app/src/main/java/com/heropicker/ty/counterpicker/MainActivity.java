@@ -15,6 +15,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
+/**
+ * Class containing the selection screen with all the buttons representing heroes.
+ * This activity follows StarterActivity and sends the user to MiddleActivity
+ *
+ * @author Ty Trusty
+ * @version 1/16/16
+ */
 //How to solve opacity performance: make a 10% transparency for each button, then switch drawables. (Tedious and time consuming).
 //TODO Current Bug: Heroes that are selected are permanently not affected by the filters, even after reset.
 //TODO Maybe use parse or have a debug time to store difference in seconds to see if it changes on update

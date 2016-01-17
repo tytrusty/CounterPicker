@@ -19,6 +19,12 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Class for the Final (4th) Activity. Handles data presentation to the user
+ *
+ * @author Ty Trusty
+ * @version 1/16/16
+ */
 public class ResultActivity extends AppCompatActivity {
     static LinkedList<List> fullRatings = new LinkedList<>();
     LinkedList<List> ratings = new LinkedList<>();

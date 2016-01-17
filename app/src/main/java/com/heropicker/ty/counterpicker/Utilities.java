@@ -8,7 +8,10 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by TY on 12/20/2015.
+ * Class containing static utility methods. Used for organization purposes
+ *
+ * @author Ty Trusty
+ * @version 1/16/16
  */
 public class Utilities {
     public static String formatHero(String hero){
@@ -20,6 +23,7 @@ public class Utilities {
         return newHero;
     }
 
+    //When
     public static String unFormatHero(String hero, ArrayList<String> tags){
         hero = modifyHeroName(hero);
         if(hero.equals("Shadow Shaman")) return "shadow_shaman";
@@ -54,6 +58,7 @@ public class Utilities {
 
     }
 
+    //Each button has a tag that is used to identify the hero. This returns a list containing those tags
     public static ArrayList<String> extractTags(ArrayList<ImageButton> buttons) {
         ArrayList<String> tags = new ArrayList<String>();
         for(ImageButton button : buttons) {
@@ -63,6 +68,7 @@ public class Utilities {
         return tags;
     }
 
+    //When connecting to the website to extract data, the website uses wonky outdated names for many heroes. This changes that
     public static String modifyHeroName(String hero){
         if(hero.toLowerCase().equals("zeus"))
             return "zuus";
@@ -82,6 +88,7 @@ public class Utilities {
             return "shredder";
         return hero;
     }
+    //After extracting the data, this method reverses that. Probably a better way to do this, but this was easy...
     public static String unModifyHeroName(String hero){
         if(hero.toLowerCase().equals("zuus"))
             return "zeus";
@@ -106,6 +113,16 @@ public class Utilities {
 
 
     //Removes duplicate heroes and adds their percentages together
+    //This function is used to process the data for each hero
+        /*WHY THIS IS NEEDED: the function receives data that may look like this:
+              abaddon, 0.5      \
+              abaddon, 1.0       ->         abaddon, 1.8
+              abaddon, 0.3      /
+                                THIS FUNCTION RETURNS
+              alchemist, 4.2    \
+              alchemist, 2.1     ->         alchemist, 6.8
+              alchemist, 0.5    /
+        */
     public static LinkedList<List>  memberReduce(LinkedList<List> heroList, LinkedList<List> resultList) {
         if(heroList == null || heroList.isEmpty()) { //SAFE CASE
             return resultList;
@@ -144,6 +161,7 @@ public class Utilities {
         return null;
     }
 
+    //Simple boolean method that loops through selected heroes to see if the hero is in the list
     public static boolean isSelected(String hero, ArrayList<String> selectedHeroes) {
         for(String heroName : selectedHeroes) {
             //System.out.println("hero " + hero + " current selected hero " + heroName);

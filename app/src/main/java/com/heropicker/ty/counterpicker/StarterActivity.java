@@ -8,6 +8,12 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.Button;
 
+/**
+ * Menu screen activity. Pretty ugly, so I may ATTEMPT to fix it.
+ *
+ * @author Ty Trusty
+ * @version 1/16/16
+ */
 public class StarterActivity extends AppCompatActivity {
     Button myButton;
     AlphaAnimation fastFadeOut;

@@ -1,7 +1,13 @@
 package com.heropicker.ty.counterpicker;
 
 /**
- * Created by TY on 12/20/2015.
+ * Listener used in the MiddleActivity (3rd).
+ * Used in conjuction with LoadListener interface.
+ * Used in MiddleActivity to test whether AsyncTask and addOverlay functions have finished execution.
+ *
+ *
+ * @author Ty Trusty
+ * @version 12/20/15
  */
 public class IntListener {
     private LoadListener listener;
