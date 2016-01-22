@@ -2,6 +2,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
 
+    <item
+        android:id="@+id/search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        android:actionViewClass="android.widget.SearchView"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="always"
+        android:title="Search"/>
 
     <item
         android:icon="@android:drawable/ic_menu_more"

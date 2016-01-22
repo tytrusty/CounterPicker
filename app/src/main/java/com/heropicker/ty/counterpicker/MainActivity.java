@@ -1,9 +1,13 @@
 package com.heropicker.ty.counterpicker;
 
+import android.app.SearchManager;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -144,8 +148,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        //Credit to theappguruz.com for the search function tutorial
+        getMenuInflater().inflate(R.menu.action_menu, menu);
+        SearchManager searchManager = (SearchManager)getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = (android.support.v7.widget.SearchView) menu.findItem(R.id.search).getActionView();
+                   searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         return true;
     }
     //TODO add search menu
