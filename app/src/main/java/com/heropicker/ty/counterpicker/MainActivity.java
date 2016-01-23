@@ -28,7 +28,7 @@ import java.util.ArrayList;
  * @version 1/16/16
  */
 //How to solve opacity performance: make a 10% transparency for each button, then switch drawables. (Tedious and time consuming).
-//TODO Current Bug: Heroes that are selected are permanently not affected by the filters, even after reset.
+//TODO Current Bug: Heroes that are selected are permanently not affected by the filters, even after reset. It's almost as if they are being added to new filters
 //TODO Maybe use parse or have a debug time to store difference in seconds to see if it changes on update
 public class MainActivity extends AppCompatActivity {
     ArrayList<Integer> myButtonIndexes = new ArrayList<>();
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> selectedHeroes = new ArrayList<>();
     ArrayList<String> filteredHeroes = new ArrayList<>();
     AlphaAnimation fadeOutAnimation; AlphaAnimation fadeInAnimation;
-    TextView counter; //test
+    TextView counter;
     Button calcButton;
     AlphaAnimation fastFadeOut;
 
@@ -153,6 +153,19 @@ public class MainActivity extends AppCompatActivity {
         SearchManager searchManager = (SearchManager)getSystemService(Context.SEARCH_SERVICE);
         SearchView searchView = (android.support.v7.widget.SearchView) menu.findItem(R.id.search).getActionView();
                    searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                System.out.println("CURR TEXT " + newText);
+                searchHeroes(newText);
+                return false;
+            }
+        });
         return true;
     }
     //TODO add search menu
@@ -164,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         if (id == R.id.reset) { //If reset button is clicked, then un-select all heroes
             resetSelection();
+            unFilter();
         //IF THE USER FILTERS FOR AGI HEROES ONLY
         } else if(id == R.id.menuFilterAgi) {
             unFilter();
@@ -181,6 +195,27 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    public void searchHeroes(String text) {
+        if(text.equals("")) {
+            unFilter();
+        }
+        int subNum = text.length();
+        for (final ImageButton button : myButtonImages) {
+            try {
+                String subTag = button.getTag().toString().substring(0, subNum);
+                if (text.equals(subTag)) {
+                    button.setVisibility(View.VISIBLE);
+                    button.setClickable(true);
+                } else {
+                    button.setVisibility(View.GONE);
+                    button.setClickable(false);
+                }
+            } catch (Exception e) {}
+        }
+
+    }
+
     public void filterHeroes(String type) {
         String[] filter1 = null,filter2 = null;
         if(type.equals("strength"))          {filter1 = intelHeroes;    filter2 = agilitityHeroes;}
@@ -210,8 +245,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void unFilter() {
+        filteredHeroes.clear();
         for (final ImageButton button : myButtonImages) {
-            //For each filter, find the the appropriate button image then set it to its default appearance
+            button.setVisibility(View.VISIBLE);
+            button.setClickable(true);
+            /*
             for(String filter: filteredHeroes){
                 if(button.getTag().equals(filter)) {
                     //button.startAnimation(fullFadeIn);
@@ -220,7 +258,7 @@ public class MainActivity extends AppCompatActivity {
                     filteredHeroes.remove(filter); //Specific button is no longer filtered.
                     break;
                 }
-            }
+            }*/
         }
     }
 
