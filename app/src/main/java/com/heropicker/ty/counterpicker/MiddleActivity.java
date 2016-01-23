@@ -60,7 +60,7 @@ public class MiddleActivity extends AppCompatActivity {
     RelativeLayout layoutView;
     RelativeLayout overlayChild;
     RelativeLayout.LayoutParams params;
-    IntListener intState;
+    IntListener intState; boolean doneProcessing = false;
     boolean isDataOld = false; //If data is old, then obtain new from online. false is default state ... method will change to true if it is older than a week
     //USED IN addSelectedHeroes ANIMATIONS
     ArrayList<String> newHeroes;
@@ -97,6 +97,15 @@ public class MiddleActivity extends AppCompatActivity {
         runAsyncTask(); //Works in the background calculating the counters                                          //
         addOverlay(selectedHeroes);  //Adds the overlay then calls the method to add the selected hero views        //
         //----------------------------------------------------------------------------------------------------------//
+
+        //Listener so that the user can skip the animations by clicking
+        layoutView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(doneProcessing)
+                    intState.set(2);
+            }
+        });
 
         //--------------THIS IS THE TRIGGER TO MOVE TO RESULT ACTIVITY-------*TRIGGERED WHEN ABOVE PROCESSES FINISH*----------------------------//
         intState = new IntListener();                                                                                                           //
@@ -139,6 +148,7 @@ public class MiddleActivity extends AppCompatActivity {
         }*/
         ratings = condensedRatings;
         intState.set(intState.get() + 1);
+        doneProcessing = true;
     }
 
     public class percentComparator implements Comparator<List> { //Custom comparator for my LinkedList<List> where List = (String "hero_name", Double winPercent)
