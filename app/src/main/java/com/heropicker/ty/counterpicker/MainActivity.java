@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
     TextView counter;
     Button calcButton;
     AlphaAnimation fastFadeOut;
+    SearchManager searchManager; //For handling search in actionbar
+    SearchView searchView;
 
     //-------------------------------------------Settings the attribute for each hero. Used for filtering ------------------------------------------------------- //
     String[] strengthHeroes  = {"abaddon","alchemist","axe","beastmaster","brewmaster","bristleback","centaur","chaos_knight","doom_bringer","dragon_knight",     //
@@ -148,27 +150,30 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        //Credit to theappguruz.com for the search function tutorial
-        getMenuInflater().inflate(R.menu.action_menu, menu);
-        SearchManager searchManager = (SearchManager)getSystemService(Context.SEARCH_SERVICE);
-        SearchView searchView = (android.support.v7.widget.SearchView) menu.findItem(R.id.search).getActionView();
-                   searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        getMenuInflater().inflate(R.menu.action_menu, menu); //inflates menu with search bar
+        searchManager = (SearchManager)getSystemService(Context.SEARCH_SERVICE);
+        searchView = (android.support.v7.widget.SearchView) menu.findItem(R.id.search).getActionView();
+                  searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+                  searchView.setSubmitButtonEnabled(true);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                return false;
+                searchHeroes(query);
+                searchView.setQuery("", false);
+                searchView.clearFocus();
+                searchView.setIconified(true);
+                return true;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                System.out.println("CURR TEXT " + newText);
+                //System.out.println("CURR TEXT " + newText);
                 searchHeroes(newText);
-                return false;
+                return true;
             }
         });
         return true;
     }
-    //TODO add search menu
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -195,6 +200,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 
     public void searchHeroes(String text) {
         if(text.equals("")) {
