@@ -174,7 +174,6 @@ public class MiddleActivity extends AppCompatActivity {
     private class AsyncWebpage extends AsyncTask<Void, Void, Void> { //Allows the program to do work in the background
         ArrayList<String> myHeroes;
         LinkedList<List> newRatings = new LinkedList<>();
-
         public AsyncWebpage(ArrayList<String> selectedHeroes) {
             myHeroes = selectedHeroes;
         }
@@ -372,7 +371,7 @@ public class MiddleActivity extends AppCompatActivity {
         OutputStreamWriter writer = new OutputStreamWriter(fileOut); //Used to write to textFile
         String dataLine = "x";
 
-        for (int i = 0; i < tags.size(); i++) {
+        for (int i = 0; i < 56; i++) {
             //System.out.println("ATTEMPTED HERO NAME " + tags.get(i));
             String modifiedName = Utilities.modifyHeroName(tags.get(i));
             String url = "http://dotamax.com/hero/detail/match_up_anti/" + modifiedName + "/?skill=vh";
