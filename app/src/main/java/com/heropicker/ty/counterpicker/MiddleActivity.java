@@ -111,7 +111,7 @@ public class MiddleActivity extends AppCompatActivity {
         intState = new IntListener();                                                                                                           //
         intState.setOnChangeListener(new LoadListener() {                                                                                       //
             @Override                                                                                                                           //
-            public void onChange(int load) {                                                                                                    //
+            public void onChange(int load) {                                                                                                //
                 if(intState.get() == 2) { //IF IT IS 2 THEN BOTH the calculation and animations are done                                        //
                     Intent i = new Intent(getApplicationContext(),ResultActivity.class);                                                        //
                     ResultActivity.fullRatings = ratings;                                                                                       //
@@ -119,7 +119,7 @@ public class MiddleActivity extends AppCompatActivity {
                     startActivity(i, ActivityOptions.makeCustomAnimation(getApplicationContext(), R.anim.fade_in, R.anim.nothing).toBundle());  //
                 }                                                                                                                               //
             }                                                                                                                                   //
-        });                                                                                                                                     //
+        });                                                                                                                                 //
         //------------------------------------------------------------------------------------------------------------------------------------- //
     }
 

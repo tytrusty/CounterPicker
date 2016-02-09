@@ -26,7 +26,9 @@ public class Utilities {
     //When
     public static String unFormatHero(String hero, ArrayList<String> tags){
         hero = modifyHeroName(hero);
+
         if(hero.equals("Shadow Shaman")) return "shadow_shaman";
+        else if(hero.equals("PhantomAssassin")) return "phantom_assassin";
         else if(hero.equals("Shadow Demon")) return "shadow_demon";
         else if(hero.equals("Earthshaker")) return "earthshaker";
         else if(hero.equals("Slark")) return "slark";
